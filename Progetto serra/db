@@ -1,0 +1,6 @@
+print "LoadingDB"
+newDevice "valvolaSud"
+newDevice "valvolaEst"
+newDevice "valvolaOvest"
+newDevice "pompa"
+print "EndDBLoading"

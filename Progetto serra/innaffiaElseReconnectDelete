@@ -1,0 +1,15 @@
+print "InnaffiaElseStart"
+status "pompa"
+newArray char periferiche(4)
+periferiche->add = "valvolaSud"
+periferiche->add = "valvolaEst"
+periferiche->add = "valvolaOvest"
+periferiche->add = "pompa"
+switchOn "pompa"
+status "pompa"
+CMD irriga (data1, data2, data3) = if status periferiche->get=3 then interval periferiche->get=2 - 90 - data1; interval periferiche->get=1-60-data2; interval periferiche->get=0 - 30 - data3; switchOff "pompa"; status "pompa";; 
+if connect periferiche->get=3 then irriga(2020.9.13.21.10, 2020.9.13.21.10, 2020.9.13.21.11); else reconnect periferiche->get=3;
+delete "pompa"
+if connect periferiche->get=3 then irriga(2020.9.11.14.52, 2020.9.11.14.51, 2020.9.11.14.51); else reconnect periferiche->get=3;
+newDevice "pompa"
+print "innaffiaElseFinish"

@@ -1,0 +1,2 @@
+switchOn "pompa"
+if connect "pompa" then if status "pompa" then interval "valvolaSud" - 90 - 2020.9.14.12.13; interval "valvolaEst"-60-2020.9.14.12.13; interval "valvolaOvest"-30-2020.9.14.12.12; switchOff "pompa"; status "pompa";;

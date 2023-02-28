@@ -1,0 +1,5 @@
+print "LoadingLibrary"
+CMD irriga (data1, data2, data3) = if status periferiche->get=3 then interval periferiche->get=2 - 90 - data1; interval periferiche->get=1-60-data2; interval periferiche->get=0 - 30 - data3; switchOff "pompa"; status "pompa";; 
+CMD routine (v) = print "routineAvviata"; repeat 2 do print "stepAvviato"; innaffia(v); sleep 30; print "stepConcluso";; print "routineConclusa"; 
+CMD innaffia (v)= if connect v then switchOn v; sleep 5; switchOff v;; 
+print "EndLibraryLoading"

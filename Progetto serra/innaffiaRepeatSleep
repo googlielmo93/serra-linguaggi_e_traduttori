@@ -1,0 +1,2 @@
+CMD routine (v) = print "routineAvviata"; repeat 2  do print "stepAvviato"; innaffia(v); sleep 30; print "stepConcluso";; print "routineConclusa";
+CMD innaffia  (v)= if connect v then switchOn v; sleep 5; switchOff v;;

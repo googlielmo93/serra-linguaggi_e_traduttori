@@ -1,0 +1,7 @@
+switchOn "pompa"
+newArray char periferiche(4)
+periferiche->add = "valvolaSud"
+periferiche->add = "valvolaEst"
+periferiche->add = "valvolaOvest"
+periferiche->add = "pompa"
+if connect periferiche->get=3 then if status periferiche->get=3 then interval periferiche->get=2 - 90 - 2020.9.14.12.45; interval periferiche->get=1-60-2020.9.14.12.45; interval periferiche->get=0 - 30 - 2020.9.14.12.44; switchOff "pompa"; status "pompa";;
